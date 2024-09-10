@@ -1,0 +1,184 @@
+/* Reset preflight */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+  background-image: url('24488452_6927689.jpg');
+  background-size: cover;
+  color: rgb(212, 212, 216);
+}
+
+p {
+  color: inherit;
+}
+
+/* Container */
+.container {
+  margin: 0 auto;
+  padding: 3rem 1rem 5rem;
+}
+
+/* Header */
+header {
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+header figure {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+}
+
+header figure img {
+  width: 7rem;
+  border-radius: 50%;
+  border: solid 6px #aaaaac;
+  padding: 0.25rem;
+}
+
+header figure figcaption {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  color: aliceblue;
+}
+
+header figure figcaption span:first-child {
+  font-size: 2rem;
+  line-height: 2rem;
+  font-weight: 500;
+}
+
+header figure figcaption span:last-child {
+  color: rgb(212, 212, 216);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+header section {
+  margin-top: 2rem;
+}
+
+header section p {
+  text-align: justify;
+}
+
+/* Main */
+main {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+main .main_title {
+  margin-bottom: 36px;
+  text-align: center;
+}
+
+main .main_title h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+main .main_title p {
+  font-size: 1rem;
+}
+
+/* Biodata List */
+main .biodata_list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsif grid */
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+}
+
+/* Individual Biodata Card */
+main .biodata_list li {
+  display: flex;
+  justify-content: center;
+}
+
+main .biodata_list figure.card {
+  background-color: #1e1e1e;
+  border: solid 1px rgb(63, 63, 70);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+  max-width: 300px; /* Adjusted width */
+  text-align: center;
+}
+
+main .biodata_list figure.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+main .biodata_list .card_image {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+main .biodata_list .card_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Makes sure the image fits inside the circle */
+}
+
+main .biodata_list .card_description {
+  font-weight: 600;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+main .biodata_list .card_description span {
+  color: rgb(212, 212, 216);
+}
+
+/* Responsive Design */
+/* Tablet */
+@media screen and (min-width: 768px) {
+  main .biodata_list {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 cards per row on tablet */
+  }
+
+  main .biodata_list figure.card {
+    max-width: 300px;
+  }
+
+  main .biodata_list .card_image {
+    width: 120px;
+    height: 120px;
+  }
+
+  main .biodata_list .card_description span:first-child {
+    font-size: 1.25rem;
+  }
+}
+
+/* Laptop */
+@media screen and (min-width: 1024px) {
+  main .biodata_list {
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* 3 cards per row on laptop */
+  }
+
+  main .biodata_list figure.card {
+    max-width: 250px;
+  }
+
+  main .biodata_list .card_image {
+    width: 100px;
+    height: 100px;
+  }
+}
