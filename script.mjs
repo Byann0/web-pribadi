@@ -8,7 +8,7 @@ console.log(data)
 //     ttl: "Bangkalan 19 Oktober 2005",
 //     alamat: "Bangkalan",
 //     noHP: "+6287852386596",
-//     photo: "./assets/baby.jpg"
+//     photo: "./images.png"
 //   },
 //   {
 //     nama: "John Doe Evan Rafa Radya Alifian",
@@ -16,7 +16,7 @@ console.log(data)
 //     ttl: "Bangkalan 19 Oktober 2005",
 //     alamat: "Bangkalan",
 //     noHP: "+6287852386596",
-//     photo: "./assets/baby.jpg"
+//     photo: "./images.png"
 //   },
 //   {
 //     nama: "John Doe Evan Rafa Radya Alifian",
@@ -24,7 +24,7 @@ console.log(data)
 //     ttl: "Bangkalan 19 Oktober 2005",
 //     alamat: "Bangkalan",
 //     noHP: "+6287852386596",
-//     photo: "./assets/baby.jpg"
+//     photo: "./images.png"
 //   },
 //   {
 //     nama: "John Doe Evan Rafa Radya Alifian",
@@ -32,7 +32,7 @@ console.log(data)
 //     ttl: "Bangkalan 19 Oktober 2005",
 //     alamat: "Bangkalan",
 //     noHP: "+6287852386596",
-//     photo: "./assets/baby.jpg"
+//     photo: "./images.png"
 //   },
 //   {
 //     nama: "John Doe Evan Rafa Radya Alifian",
@@ -40,7 +40,7 @@ console.log(data)
 //     ttl: "Bangkalan 19 Oktober 2005",
 //     alamat: "Bangkalan",
 //     noHP: "+6287852386596",
-//     photo: "./assets/baby.jpg"
+//     photo: "./images.png"
 //   },
 //   {
 //     nama: "John Doe Evan Rafa Radya Alifian",
@@ -48,7 +48,7 @@ console.log(data)
 //     ttl: "Bangkalan 19 Oktober 2005",
 //     alamat: "Bangkalan",
 //     noHP: "+6287852386596",
-//     photo: "./assets/baby.jpg"
+//     photo: "./images.png"
 //   },
 // ];
 

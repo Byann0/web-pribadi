@@ -7,14 +7,13 @@
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+/* Body */
 body {
   background-image: url('24488452_6927689.jpg');
-  background-size: cover;
-  color: rgb(212, 212, 216);
 }
 
 p {
-  color: inherit;
+  color: rgb(212, 212, 216);
 }
 
 /* Container */
@@ -36,7 +35,7 @@ header figure {
 }
 
 header figure img {
-  width: 7rem;
+  width: 12rem;
   border-radius: 50%;
   border: solid 6px #aaaaac;
   padding: 0.25rem;
@@ -50,13 +49,13 @@ header figure figcaption {
 }
 
 header figure figcaption span:first-child {
-  font-size: 2rem;
-  line-height: 2rem;
-  font-weight: 500;
+  color: aliceblue;
+  font-size: 1.8rem;
+  font-weight: bold;
 }
 
 header figure figcaption span:last-child {
-  color: rgb(212, 212, 216);
+  color: aliceblue;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -79,106 +78,136 @@ main .main_title {
   text-align: center;
 }
 
-main .main_title h2 {
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-main .main_title p {
-  font-size: 1rem;
-}
-
-/* Biodata List */
-main .biodata_list {
+main ul {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsif grid */
-  gap: 2rem;
-  list-style: none;
-  padding: 0;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1rem;
 }
 
-/* Individual Biodata Card */
-main .biodata_list li {
+main ul li figure.card {
+  box-sizing: border-box;
+  background-color: rgb(80, 135, 255);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+main ul li figure.card .card_header {
   display: flex;
+  column-gap: 12px;
+  align-items: center;
+}
+
+main ul li figure.card .card_header .card_image {
+  width: 128px;
+  height: 128px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+main ul li figure.card .card_header .card_image img {
+  margin-top: -12px;
+}
+
+main ul li figure.card .card_header .card_description {
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+main ul li figure.card .card_header .card_description span:last-child {
+  color: rgb(212, 212, 216);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+main ul li figure.card .card_content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  margin-top: px;
+}
+
+/* Footer */
+footer {
+  padding: 3rem 1rem;
+}
+
+footer section {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
   justify-content: center;
 }
 
-main .biodata_list figure.card {
-  background-color: #1e1e1e;
-  border: solid 1px rgb(63, 63, 70);
-  border-radius: 12px;
-  padding: 1rem;
-  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s, box-shadow 0.3s;
-  width: 100%;
-  max-width: 300px; /* Adjusted width */
+footer section img:first-child,
+footer section img:last-child {
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  width: 3rem;
+}
+
+footer p {
   text-align: center;
-}
-
-main .biodata_list figure.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2);
-}
-
-main .biodata_list .card_image {
-  width: 100px;
-  height: 100px;
-  overflow: hidden;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-}
-
-main .biodata_list .card_image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Makes sure the image fits inside the circle */
-}
-
-main .biodata_list .card_description {
-  font-weight: 600;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-main .biodata_list .card_description span {
-  color: rgb(212, 212, 216);
+  font-size: 14px;
 }
 
 /* Responsive Design */
 /* Tablet */
 @media screen and (min-width: 768px) {
-  main .biodata_list {
-    grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 cards per row on tablet */
+  header figure {
+    justify-content: space-between;
   }
 
-  main .biodata_list figure.card {
-    max-width: 300px;
+  header figure img {
+    order: 2;
+    width: 12rem;
   }
 
-  main .biodata_list .card_image {
-    width: 120px;
-    height: 120px;
+  header figure figcaption {
+    order: 1;
   }
 
-  main .biodata_list .card_description span:first-child {
+  header figure figcaption span:first-child {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+
+  header figure figcaption span:last-child {
     font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  main .main_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1rem;
+  }
+
+  main .main_title h2 {
+    font-size: 32px;
+  }
+
+  main .main_title span {
+    font-size: 20px;
+  }
+
+  main ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  main ul li figure.card .card_header .card_description span:first-child {
+    font-size: 20px;
   }
 }
 
 /* Laptop */
 @media screen and (min-width: 1024px) {
-  main .biodata_list {
-    grid-template-columns: repeat(3, minmax(0, 1fr)); /* 3 cards per row on laptop */
+  header figure img {
+    width: 14rem;
   }
 
-  main .biodata_list figure.card {
-    max-width: 250px;
-  }
-
-  main .biodata_list .card_image {
-    width: 100px;
-    height: 100px;
+  main ul {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
